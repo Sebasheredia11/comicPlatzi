@@ -1,0 +1,43 @@
+body {
+  background: #ff0070;
+  background: -webkit-gradient(linear, left top, right top, from(#3d009a), color-stop(46%, #0046ff), color-stop(70%, red), color-stop(90%, #00feff));
+  background: linear-gradient(90deg, #3d009a 0%, #0046ff 46%, red 70%, #00feff 90%);
+}
+
+.projects__images {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(320px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-auto-rows: minmax(250px, auto);
+  gap: 20px;
+  padding: 20px;
+  grid-auto-flow: dense;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 455px) {
+  .projects__images {
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+.grid-item {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 600px) {
+  .wide {
+    grid-column: span 2;
+  }
+  .tall {
+    grid-row: span 2;
+  }
+}
+/*# sourceMappingURL=main.css.map */
